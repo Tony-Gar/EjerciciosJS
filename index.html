@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, ini
+tial-scale=1.0">
+    <title>Ejercicios de Lógica en JavaScript</title>
+</head>
+
+<body>
+   
+    <h1>Aprendiendo Javascript</h1>
+    <p>Ejercicios de Lógica en JavaScript</p>
+    <!-- Ejercicio 1: Manipulación del DOM -->
+    <h2>1. Manipulación del DOM</h2>
+    <p id="texto">Este es el texto original.</p>
+    <button id="botonCambiar">Cambiar Texto</button>
+    <hr>
+
+    <!-- Ejercicio 2: Crear elementos en el DOM -->
+    <h2>2. Crear elementos en el DOM</h2>
+    <ul id="lista">
+        <li>Elemento 1</li>
+        <li>Elemento 2</li>
+    </ul>
+    <button id="botonAgregar">Agregar Elemento</button>
+    <hr>
+
+    <!-- Ejercicio 3: Eliminar elementos del DOM -->
+    <h2>3. Eliminar elementos del DOM</h2>
+    <ul id="listaEliminar">
+        <li>Elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+    </ul>
+    <button id="botonEliminar">Eliminar Último Elemento</button>
+    <hr>
+
+    <!-- Ejercicio 4: Eventos (detectar teclas presionadas) -->
+    <h2>4. Eventos (detectar teclas presionadas)</h2>
+    <p>Presiona cualquier tecla para verlo en la consola.</p>
+    <hr>
+
+    <!-- Ejercicio 5: Formularios (validación de campos) -->
+    <h2>5. Validación de Formularios</h2>
+    <form id="miFormulario">
+        <input type="text" id="nombre" placeholder="Nombre"><br>
+        <input type="email" id="email" placeholder="Email"><br>
+        <button type="submit">Enviar</button>
+    </form>
+
+
+    
+    <script>
+        // Ejercicio 1: Manipulación del DOM
+        document.getElementById('botonCambiar').addEventListener('click', function () {
+            document.getElementById('texto').textContent = "¡Texto cambiado!";
+        });
+
+        // Ejercicio 2: Crear elementos en el DOM
+        document.getElementById('botonAgregar').addEventListener('click', function () {
+            let nuevoElemento = document.createElement('li');
+            nuevoElemento.textContent = 'Nuevo Elemento';
+            document.getElementById('lista').appendChild(nuevoElemento);
+        });
+
+        // Ejercicio 3: Eliminar elementos del DOM
+        document.getElementById('botonEliminar').addEventListener('click', function () {
+            let lista = document.getElementById('listaEliminar');
+            if (lista.lastElementChild) {
+                lista.removeChild(lista.lastElementChild);
+            }
+        });
+
+        // Ejercicio 4: Eventos (detectar teclas presionadas)
+        document.addEventListener('keydown', function (event) {
+            console.log("Tecla presionada: " + event.key);
+        });
+
+        // Ejercicio 5: Validación de Formularios
+        document.getElementById('miFormulario').addEventListener('submit', function (event) {
+            let nombre = document.getElementById('nombre').value;
+            let email = document.getElementById('email').value;
+
+            if (nombre === "" || email === "") {
+                alert("Todos los campos deben estar llenos.");
+                event.preventDefault(); // Evita el envío del formulario si hay campos vacíos
+            }
+        });
+    </script>
+
+
+    <!-- Incluirás los archivos de JavaScript de cada ejer
+cicio aquí -->
+    <script src="js/ejercicio36.js"></script>
+    <!-- <script src="js/ejercicio2.js"></script> -->
+    <!-- <script src="js/ejercicio1.js"></script> -->
+</body>
+
+</html>
