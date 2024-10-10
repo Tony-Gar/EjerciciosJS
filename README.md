@@ -6,7 +6,7 @@ INGENIERÍA EN DESARROLLO Y GESTIÓN DE SOFTWARE MULTIPLATAFORMA
 
 Desarrollo de Aplicaciones Progresivas
 
-Videojuego JS
+Ejercicios JS
 
 Antolín García Pérez
 2021024
@@ -16,5 +16,5 @@ Antolín García Pérez
 
 
 
-ZACUALTIPÁN DE ÁNGELES, HGO, A 05 DE OCTUBRE 2024.
+ZACUALTIPÁN DE ÁNGELES, HGO, A 09 DE OCTUBRE 2024.
 
